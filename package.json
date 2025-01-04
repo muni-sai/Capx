@@ -1,0 +1,27 @@
+{
+  "name": "capx",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "bun --watch server/index.ts",
+    "build": "tsc && cd Frontend && bun install && bun run build",
+    "build:watch": "tsc --watch"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.2",
+    "@kinde-oss/kinde-node-express": "^1.6.0",
+    "@kinde-oss/kinde-typescript-sdk": "^2.9.1",
+    "@prisma/client": "6.1.0",
+    "hono": "^4.6.14",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.1.0",
+    "zod": "^3.24.1"
+  }
+}
